@@ -1,0 +1,81 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: gilory;
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    color: white;
+    background-color: #111;
+    padding: 20px;
+}
+
+#box {
+    height: 300px;
+    width: 300px;
+    background-color: crimson;
+    border-radius: 10px;
+    position: absolute;
+    z-index: -1;
+
+    animation-name: move2; /* initialization name */
+    animation-duration: 2s;
+    animation-timing-function: ease-in-out;
+    animation-delay: 2s;
+    animation-iteration-count: 4;
+    animation-fill-mode: forwards;
+    animation-direction: alternate;
+}
+
+/* for animation we use keyframes and before/after can we used to create animations */
+@keyframes move {
+    from {
+        left: 0;
+        background-color: red;
+    }
+    to {
+        left: 70%;
+        background-color: aqua;
+    }
+}
+
+@keyframes move2 {
+    0% {
+        left: 10%;
+        top: 0;
+        background-color: antiquewhite;
+    }
+    50% {
+        left: 50%;
+        top: 0;
+        background-color: green;
+    }
+    100% {
+        left: 80%;
+        top: 50%;
+        background-color: azure;
+    }
+}
+
+h1::after {
+    content: "I'm ayush";
+    background-color: aqua;
+    padding: 5px;
+    font-size: 20px;
+    border-radius: 10px;
+}
+
+h1::before {
+    content: "asasd";
+    background-color: chartreuse;
+    padding: 5px;
+    font-size: 20px;
+    border-radius: 10px;
+}
